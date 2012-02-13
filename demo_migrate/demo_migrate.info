@@ -1,0 +1,12 @@
+name = "Demo migration"
+description = "Extending migrate module to migrate rails 3 site into drupal7"
+core = 7.x
+version = 7.x-1.0
+project = "migrate"
+dependencies[] = migrate
+dependencies[] = feature_migrate_demo
+
+files[] = vocab.inc
+files[] = posts.inc
+files[] = comment.inc
+files[] = users.inc

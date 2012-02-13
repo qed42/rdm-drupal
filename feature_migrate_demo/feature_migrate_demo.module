@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_migrate_demo feature.
+ */
+
+include_once('feature_migrate_demo.features.inc');
