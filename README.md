@@ -1,7 +1,7 @@
 # Steps to Install:
-* clone these modules into site/all/modules/custom folder of you drupal instance.
+* clone these modules into site/all/modules/custom folder of your drupal instance.
+* Enable feature_migrate_demo (Requires features module) -- this will setup all required content types for the migration process to work with.
 * Enable migrate module followed with migrate_demo module.
-* Enable feature_migrate_demo -- this will fetch in all the required content types for the migration process into drupal.
 
 #Steps for migration:
 * Using drush:
