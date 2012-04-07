@@ -40,7 +40,7 @@
     $this->addFieldMapping('signature')
           ->issueGroup(t('DNM'));
     $this->addFieldMapping('signature_format')->defaultValue('filtered_html');
-    $this->addFieldMapping('created', 'created_at');
+    $this->addFieldMapping('created', time());
     $this->addFieldMapping('access')
           ->issueGroup(t('DNM'));
     $this->addFieldMapping('login')
@@ -49,5 +49,16 @@
     $this->addFieldMapping('picture')->defaultValue(0);
     $this->addFieldMapping('init')
           ->issueGroup(t('DNM'));
+  }
+
+  public function complete($entity, stdClass $row) {
+    $pass = 'U'.$entity->pass;
+    $uid = $entity->uid;
+    db_update('users')
+      ->fields(array(
+        'pass' => $pass,
+      ))
+      ->condition('uid', $uid)
+      ->execute();
   }
 }
